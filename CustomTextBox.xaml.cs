@@ -25,20 +25,20 @@ namespace CustomControlBinding
         public CustomTextBox()
         {
             InitializeComponent();
-            //RootElement.DataContext = this;
+            RootElement.DataContext = this;
         }
 
         public static DependencyProperty TextContentProperty = DependencyProperty.Register("TextContent", typeof(string), typeof(CustomTextBox),
-            new UIPropertyMetadata(String.Empty, TextContentPropertyChanged));
+            new UIPropertyMetadata(/*String.Empty, TextContentPropertyChanged)*/));
 
-        private static void TextContentPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            CustomTextBox x = (CustomTextBox)d;
-            x.textBox.Text = e.NewValue as string;
-        }
+        //private static void TextContentPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        //{
+        //    CustomTextBox x = (CustomTextBox)d;
+        //    x.textBox.Text = e.NewValue as string;
+        //}
 
         public string TextContent
-        {
+        { 
             get { return (string)GetValue(TextContentProperty); }
             set { SetValue(TextContentProperty, value); }
         }

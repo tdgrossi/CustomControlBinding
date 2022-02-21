@@ -8,6 +8,6 @@
              x:Name="customTextBox"
              d:DesignHeight="30" d:DesignWidth="200">
     <Grid x:Name="RootElement">
-        <TextBox x:Name="textBox" Text="{Binding TextContent, ElementName=customTextBox}"/>
+        <TextBox x:Name="textBox"  Text="{Binding TextContent, ElementName=customTextBox, UpdateSourceTrigger=PropertyChanged}"/>        
     </Grid>
 </UserControl>

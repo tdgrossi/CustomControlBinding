@@ -14,7 +14,7 @@
 
         <StackPanel Grid.Row="0"  Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Content="Input text to bind:"/>
-            <local:CustomTextBox Width="200" Height="30" TextContent="{Binding InputBindingText, UpdateSourceTrigger=PropertyChanged}"/>            
+            <local:CustomTextBox Width="200" Height="30" TextContent="{Binding InputBindingText, Mode=TwoWay}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1"  Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
